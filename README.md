@@ -10,7 +10,7 @@ Just a simple chat app built with React, Go, Websockets and Redis.
 
 ## Instalando o Redis
 
-> Baseado em [Redis] (https://redis.io/topics/quickstart)
+> Baseado em [Redis](https://redis.io/topics/quickstart)
 
 1. Primeiramente, baixar o Redis do seu site:
 ```bash
@@ -22,9 +22,21 @@ $ tar xvzf redis-stable.tar.gz
 ```
 3. Entre na pasta do Redis:
 ```bash
-$ cd redis-stable
+$ cd redi
+
+    Baseado em [Go Getting Started] (https://golang.org/doc/install)
+s-stable
 ```
-4. Executar o comando make para compilar os arquivos e instalar:
+
+    Baseado em [Go Getting Started] (https://golang.org/doc/install)
+
+4. Execut
+
+    Baseado em [Go Getting Started] (https://golang.org/doc/install)
+ar o comando make para compilar 
+
+    Baseado em [Go Getting Started] (https://golang.org/doc/install)
+os arquivos e instalar:
 ```bash
 $ make
 ```
@@ -46,7 +58,7 @@ Pressionar *Enter* (o & e *Enter* executam o servidor em segundo plano).
 
 ----
 ## Instalando o Go
-> Baseado em [Go Getting Started] (https://golang.org/doc/install)
+> Baseado em [Go Getting Started](https://golang.org/doc/install)
 
 1. Baixar o arquivo pelo site do Go(link acima).
 
