@@ -8,7 +8,7 @@ Just a simple chat app built with React, Go, Websockets and Redis.
 
 > Instalando e testando a aplicação primeiramente em ambiente Ubuntu Linux 18.04.
 
-## Instalando o Regis
+## Instalando o Redis
 
 > Baseado em [Redis] (https://redis.io/topics/quickstart)
 
@@ -28,6 +28,9 @@ cd redis-stable
 ```bash
 make
 ```
-
+5. Execute o comando make install para copiar os comandos para o diretório de binários:
+```bash
+make install
+```
 
 ----
