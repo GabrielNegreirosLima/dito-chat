@@ -8,9 +8,15 @@ Just a simple chat app built with React, Go, Websockets and Redis.
 
 > Instalando e testando a aplicação primeiramente em ambiente Ubuntu Linux 18.04.
 
-## Instalando o Redis
+## Instalando o Redis - redis-install.sh
 
 > Baseado em [Redis](https://redis.io/topics/quickstart)
+
+Este script pode ser executado com: 
+```bash
+$ ./redis-install.sh
+```
+Cada comando do script para instalação está descrito e explicado abaixo.
 
 1. Primeiramente, baixar o Redis do seu site:
 ```bash
@@ -37,15 +43,11 @@ $ sudo make install
 $ make test
 ```
 
-Agora que a instalação foi concluída, inicia-se o Redis:
-```bash
-$ redis-server &
-```
-Pressionar *Enter* (o & e *Enter* executam o servidor em segundo plano).
-
 ----
-## Instalando o Go
+## Instalando o Go - go-install.sh
 > Baseado em [Go Getting Started](https://golang.org/doc/install)
+
+ATENÇÃO! O script go-install.sh irá baixar a versão 1.12, para Linux amd64 (64 bits), além de apenas instalar o Go, sem o teste contido neste manual.
 
 1. Baixar o arquivo pelo site do Go(link acima).
 
@@ -61,7 +63,7 @@ $ export PATH=$PATH:/usr/local/go/bin
 
 4. Adicionar o comando acima no final do arquivo /etc/profile para uma configuração permanente. O arquivo precisa ser aberto com permissão de root:
 ```bash
-$ sudo vim /etc/profile
+$ sudo echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile
 ```
 
 5. Para testar basta criar um um diretório como em $HOME/go/src/hello, e um arquivo helloworld.go dentro deste diretório com o seguinte conteúdo:
@@ -85,3 +87,20 @@ $ ./helloword
 ```bash
 hello, world
 ```
+
+----
+## Configurando as variáveis de ambiente
+
+Para configurar as variáveis de ambiente do backend, basta executar os comandos:
+```bash
+$ export ALLOWED_ORIGIN=http://localhost:3000
+$ export REDIS_ADDR=localhost:6379
+```
+
+Para configurar as variáveis de ambiente do backend, basta executar os comandos:
+```bash
+$ export ALLOWED_ORIGIN=http://localhost:3000
+$ export REDIS_ADDR=localhost:6379
+```
+
+Para tornar as variáveis permanentes, basta adicionar os comandos acima no final do arquivo em /etc/profile.
