@@ -97,7 +97,7 @@ $ export ALLOWED_ORIGIN=http://localhost:3000
 $ export REDIS_ADDR=localhost:6379
 ```
 
-Para configurar as variáveis de ambiente do backend, basta executar os comandos:
+Para configurar as variáveis de ambiente do frontend, basta executar os comandos:
 ```bash
 $ export REACT_APP_BACKEND_WS=ws://localhost:8080
 $ export REACT_APP_BACKEND_URL=http://localhost:8080
