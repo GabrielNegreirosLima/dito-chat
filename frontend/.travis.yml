@@ -1,11 +1,15 @@
 language: node_js
 
 node_js:
-  -stable
+  - stable
 
 cache:
   directories:
-    -node_modules
+    - node_modules
+
+branches:
+  only:
+  - scripts-ci
 
 script:
-  -npm test
+  - npm test
