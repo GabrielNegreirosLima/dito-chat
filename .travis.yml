@@ -12,4 +12,4 @@ before_script:
   - cd frontend/
 
 script:
-  - npm test
+  - yarn test
