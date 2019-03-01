@@ -8,6 +8,8 @@ cache:
   directories:
     - node_modules
 
+before_script:
+  - cd frontend/
 
 script:
   - npm test
