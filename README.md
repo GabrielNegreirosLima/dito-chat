@@ -170,5 +170,4 @@ Na plataforma pode-se perceber cada tentativa de _building_, temos um novo item 
 
 O arquivo ```.travis.yml``` detêm as configurações necessárias para que a os testes do frontend sejam executados corretamente no ambiente, dado que os requisitos já são cumpridos durante o processo de teste(como variáveis de ambiente, que agora são configuradas em .env dentro da pasta frontend).
 
-
 ----
