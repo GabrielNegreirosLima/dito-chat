@@ -6,7 +6,7 @@ Just a simple chat app built with React, Go, Websockets and Redis.
 ----
 # Instalando e configurando o ambiente
 
-> Instalando e testando a aplicação primeiramente em ambiente Ubuntu Linux 18.04.
+> Instalando e testando a aplicação primeiramente em ambiente Ubuntu Linux 18.04. Os scripts em Shell estão dentro da pasta basics.
 
 ## Instalando o Redis - redis-install.sh
 
