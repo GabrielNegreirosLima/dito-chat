@@ -96,11 +96,12 @@ Para configurar as variáveis de ambiente do backend, basta executar os comandos
 $ export ALLOWED_ORIGIN=http://IP_PUBLICO_DO_SERVIDOR:3000
 $ export REDIS_ADDR=localhost:6379
 ```
+Para tornar as variáveis permanentes, basta adicionar os comandos acima no final do arquivo em /etc/profile.
 
-Para configurar as variáveis de ambiente do frontend, basta executar os comandos:
+As variáveis de ambiente do frontend são configuradas automaticamente, dentro do arquivo .env, na raiz da pasta frontend:
 ```bash
-$ export REACT_APP_BACKEND_WS=ws://localhost:8080
-$ export REACT_APP_BACKEND_URL=http://localhost:8080
+REACT_APP_BACKEND_WS=ws://localhost:8080
+REACT_APP_BACKEND_URL=http://localhost:8080
 ```
 
-Para tornar as variáveis permanentes, basta adicionar os comandos acima no final do arquivo em /etc/profile.
+
