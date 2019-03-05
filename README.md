@@ -93,7 +93,7 @@ hello, world
 
 Para configurar as variáveis de ambiente do backend, basta executar os comandos:
 ```bash
-$ export ALLOWED_ORIGIN=http://localhost:3000
+$ export ALLOWED_ORIGIN=http://IP_PUBLICO_DO_SERVIDOR:3000
 $ export REDIS_ADDR=localhost:6379
 ```
 
