@@ -2,6 +2,19 @@
 
 Just a simple chat app built with React, Go, Websockets and Redis.
 
+## Mudanças para implementação do projeto
+
+### Frontend
+
+Para uma abstração maior das variáveis de ambiente no frontend, e evitar configurações posteriores, tanto na plataforma de integração quanto no ambiente de produção, foi criado o arquivo ```./frontend/.env```. Desta forma a aplicação têm melhor escalabilidade com relação às variáveis de ambiente, sendo incluídas no arquivo pelo programador. Este arquivo é procurado pelos ambientes de produção, teste e desenvolvimento, porém __as variáveis configuradas no terminal ou no sistema operacional têm precedência__.
+Nele, observa-se as variáveis de ambiente detalhadas no README do diretório ```./frontend```, além de uma variável que instrui o projeto à usar a porta padrão 80:
+
+```
+REACT_APP_BACKEND_WS=ws://localhost:8080
+REACT_APP_BACKEND_URL=http://localhost:8080
+PORT=80
+```
+
 ----
 # Instalando e configurando o ambiente
 
@@ -116,7 +129,7 @@ PORT=80
 ----
 # Integração contínua com Travis CI
 
-Para executar a suíte de testes do frontend a cada _push_ do desenvolvedor, foi utilizado o Travis CI. O link para este projeto na plataforma [pode ser encontrado aqui](https://travis-ci.org/GabrielNegreirosLima/dito-chat).
+Para executar a suíte de testes do frontend a cada _push_ do desenvolvedor, foi utilizado o Travis CI. O Travis CI foi escolhido por ser uma plataforma online, de fácil utilização e gratuíta. O link para este projeto na plataforma [pode ser encontrado aqui](https://travis-ci.org/GabrielNegreirosLima/dito-chat).
 
 Na plataforma pode-se perceber cada tentativa de _building_, temos um novo item em _Build History_, que pode ser acessado para obtenção de informações.
 
