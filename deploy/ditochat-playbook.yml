@@ -1,11 +1,13 @@
 ---
-- hosts: 10.0.2.15
+- hosts: ditochat
   vars:
-    project_path: /home/negreiros/ditochat
     release_path: /home/negreiros/ditochat_public
 
   tasks:
     - name: Clona o repositório
       git:
-        repo: gabrielnegreiroslima@gmail.com:gabrielnegreiroslima@gmail.com/GabrielNegreirosLima/dito-chat/tree/scripts-cd.git
+        repo: ssh://git@github.com/GabrielNegreirosLima/dito-chat.git
+        accept_hostkey: yes
+        key_file: /home/negreiros/.ssh/id_rsa
+        version: scripts-cd
         dest: "{{ release_path }}"
