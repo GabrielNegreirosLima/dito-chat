@@ -191,10 +191,24 @@ $ ansible --version
 
 Basicamente os arquivos de configuração são ```./deploy/ansible.cfg``` e ```./deploy/hosts```.
 
-O arquivo ```./deploy/ansible.cfg``` diz quais são os _inventories_, listas de configuração do ansible:
+O arquivo ```./deploy/ansible.cfg``` diz quais são os _inventories_, listas de configuração do Ansible:
 ```bash
+# Arquivo ./deploy/ansible.cfg
 [defaults]
 
 inventory = ./hosts
 ```
 
+O arquivo ```./deploy/hosts``` informa traduz nomes para IPs como facilitador para uso do Ansible, além disto este arquivo pode trazer configurações com usuário e senha de SSH para ser acessado:
+```bash
+# Arquivo ./deploy/hosts
+[ditochat]
+
+192.168.1.11 ansible_user=ubuntu ansible_password=yourpassword
+```
+
+## *Playbook*
+
+O playbook é um arquivo baseado na linguagem YAML que executará nossas tarefas de deploy, o Ansible se encarregará de executar o script com todos os passos para que o projeto seja clonado do GitHub,  copiado para seu diretório em produção, e que o serviço de web seja reiniciado.
+
+----
