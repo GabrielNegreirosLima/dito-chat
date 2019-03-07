@@ -9,6 +9,7 @@ node_js:
 #cache:
 # directories:
 #   - node_modules
+#
 
 # Comando a ser executado antes dos scripts de teste
 before_script:
