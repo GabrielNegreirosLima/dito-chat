@@ -49,6 +49,16 @@ O arquivo ```./deploy/hosts``` informa traduz nomes para IPs como facilitador pa
 192.168.0.10 ansible_user=ubuntu ansible_password=yourpassword
 ```
 
+<br>
+
+Para uma configuração completa, é preciso acessar o host pelo menos uma vez, para que este seja adicionado no arquivo ```$HOME/.ssh/know_hosts``` do __servidor de controle.__
+
+```bash
+$ sudo ssh ubuntu@192.168.0.10
+```
+
+
+
 
 
 <br>

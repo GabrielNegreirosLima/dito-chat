@@ -1,13 +1,20 @@
 ---
-- hosts: ditochat
+- hosts: localhost
   vars:
-    release_path: /home/negreiros/ditochat_public
+    release_path: /home/ntic/ditochat_implements
 
   tasks:
     - name: Clona o repositório
       git:
         repo: ssh://git@github.com/GabrielNegreirosLima/dito-chat.git
         accept_hostkey: yes
-        key_file: /home/negreiros/.ssh/id_rsa
+        key_file: /home/ntic/.ssh/id_rsa
         version: scripts-cd
         dest: "{{ release_path }}"
+
+- hosts: ditochat
+  tasks:
+    - name: Copia o diretório para a pasta de produção
+      copy:
+        src: /home/ntic/ditochat_implements/
+        dest: /home/ntic/ditochat_public
