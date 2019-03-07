@@ -102,12 +102,19 @@ $ ./helloword
 hello, world
 ```
 
-<br>
-# Configurando as variáveis de ambiente
+
 
 <br>
+
+# Configurando as variáveis de ambiente
+
+
+
+<br>
+
 ## Backend
 Para configurar as variáveis de ambiente do backend, basta executar os comandos:
+
 ```bash
 $ export ALLOWED_ORIGIN=http://URL_DO_CHAT
 $ export REDIS_ADDR=localhost:6379
