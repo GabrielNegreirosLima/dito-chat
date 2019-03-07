@@ -22,7 +22,10 @@ $ sudo apt-get install ssh
 $ sudo apt-get install sshpass
 ```
 
-<br>
+
+
+<br></br>
+
 # Instalando o Redis - redis-install.sh
 
 > Baseado em [Redis](https://redis.io/topics/quickstart)
