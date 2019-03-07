@@ -1,10 +1,9 @@
-# Instalando e configurando programas secundários e dependências
+# Instalando e configurando o ambiente
 
-
-
+## Instalando e configurando programas secundários e dependências
 <br></br>
 
-## Python
+### Python
 Para garantia de instalação correta de todos os componentes corretamente, execute no __servidor de produção__:
 
 ```bash
@@ -15,7 +14,7 @@ $ sudo apt-get install python
 
 <br>
 
-## Utilitários de SSH
+### Utilitários de SSH
 Para que o __servidor de produção__ seja acessado pelo __servidor de controle__ (com Ansible), segue a instalação do SSH e SSHpass:
 ```bash
 $ sudo apt-get install ssh
@@ -26,7 +25,7 @@ $ sudo apt-get install sshpass
 
 <br></br>
 
-# Instalando o Redis - redis-install.sh
+## Instalando o Redis - redis-install.sh
 
 > Baseado em [Redis](https://redis.io/topics/quickstart)
 
@@ -64,7 +63,7 @@ $ make test
 
 <br>
 
-# Instalando o Go - go-install.sh
+## Instalando o Go - go-install.sh
 > Baseado em [Go Getting Started](https://golang.org/doc/install)
 
 __ATENÇÃO!__ O script ```./basics/go-install.sh``` irá baixar a versão 1.12, para Linux amd64 (64 bits), além de apenas instalar o Go, sem o teste contido neste manual.
@@ -119,11 +118,11 @@ hello, world
 
 <br>
 
-# Configurando as variáveis de ambiente
+## Configurando as variáveis de ambiente
 
 <br>
 
-## Backend
+### Backend
 Para configurar as variáveis de ambiente do backend, basta executar os comandos:
 
 ```bash
@@ -134,7 +133,7 @@ Para tornar as variáveis permanentes, basta adicionar os comandos acima no fina
 
 <br>
 
-## Frontend
+### Frontend
 As variáveis de ambiente do frontend são configuradas automaticamente, dentro do arquivo ```./frontend/.env```, na raiz da pasta frontend:
 ```bash
 REACT_APP_BACKEND_WS=ws://localhost:8080

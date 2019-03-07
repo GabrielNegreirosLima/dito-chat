@@ -21,7 +21,7 @@ PORT=80
 
 <br>
 
-# Instalando e configurando o ambiente
+# Instalando e configurando o ambiente de produção
 
 > Instalando e testando a aplicação primeiramente em ambiente Ubuntu Linux 18.04. Os scripts em Shell estão dentro do diretório ./basics.
 
