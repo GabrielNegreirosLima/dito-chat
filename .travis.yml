@@ -14,6 +14,7 @@ node_js:
 # Comando a ser executado antes dos scripts de teste
 before_script:
   - cd frontend/
+  - rm -Rf node_modules/
 
 # Instalacao das dependencias e execucao da suite de testes
 script:
