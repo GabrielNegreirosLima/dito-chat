@@ -6,9 +6,9 @@ node_js:
   - stable
 
 # Pasta a ser cacheada
-cache:
-  directories:
-    - node_modules
+#cache:
+# directories:
+#   - node_modules
 
 # Comando a ser executado antes dos scripts de teste
 before_script:
