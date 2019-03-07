@@ -1,15 +1,20 @@
+# Linguagem a ser executada
 language: node_js
 
+# Versao do Node
 node_js:
   - stable
 
+# Pasta a ser cacheada
 cache:
   directories:
     - node_modules
 
+# Comando a ser executado antes dos scripts de teste
 before_script:
   - cd frontend/
 
+# Instalacao das dependencias e execucao da suite de testes
 script:
   - npm install
   - npm test
