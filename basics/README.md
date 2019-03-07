@@ -1,13 +1,20 @@
 # Instalando e configurando programas secundários e dependências
 
-<br>
+
+
+<br></br>
+
 ## Python
 Para garantia de instalação correta de todos os componentes corretamente, execute no __servidor de produção__:
+
 ```bash
 $ sudo apt-get install python
 ```
 
+
+
 <br>
+
 ## Utilitários de SSH
 Para que o __servidor de produção__ seja acessado pelo __servidor de controle__ (com Ansible), segue a instalação do SSH e SSHpass:
 ```bash
@@ -107,8 +114,6 @@ hello, world
 <br>
 
 # Configurando as variáveis de ambiente
-
-
 
 <br>
 
