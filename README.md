@@ -24,7 +24,7 @@ PORT=80
 
 > Instalando e testando a aplicação primeiramente em ambiente Ubuntu Linux 18.04. Os scripts em Shell estão dentro do diretório ./basics.
 
-A descrição detalhada da instalação das depêndencias e configuração do __ambiente de produção__ pode ser encontrada no diretório ```./basics``` e seu [README.md]().
+A descrição detalhada da instalação das depêndencias e configuração do __ambiente de produção__ pode ser encontrada no diretório ```./basics``` e seu [README.md](https://github.com/GabrielNegreirosLima/dito-chat/tree/master/basics#instalando-e-configurando-o-ambiente).
 
 <br>
 
