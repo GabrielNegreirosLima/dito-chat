@@ -1,20 +1,28 @@
 ---
 - hosts: localhost
   vars:
-    release_path: /home/ntic/ditochat_implements
+    release_path: /home/negreiros/ditochat_implements
 
   tasks:
     - name: Clona o repositório
       git:
         repo: ssh://git@github.com/GabrielNegreirosLima/dito-chat.git
         accept_hostkey: yes
-        key_file: /home/ntic/.ssh/id_rsa
+        key_file: /home/negreiros/.ssh/id_rsa
         version: scripts-cd
         dest: "{{ release_path }}"
+
+    - name: Cria o build do frontend
+      command: cd /home/negreiros/ditochat_implements/
+      command: yarn --cwd "{{ release_path }}"/frontend/ install
+      command: yarn --cwd "{{ release_path }}"/frontend/ run build
+
 
 - hosts: ditochat
   tasks:
     - name: Copia o diretório para a pasta de produção
       copy:
-        src: /home/ntic/ditochat_implements/
-        dest: /home/ntic/ditochat_public
+        src: /home/negreiros/ditochat_implements/frontend/build
+        dest: /home/negreiros/ditochat_public
+
+    
