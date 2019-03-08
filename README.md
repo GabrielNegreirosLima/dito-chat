@@ -3,7 +3,6 @@
 Just a simple chat app built with React, Go, Websockets and Redis.
 
 
-
 __ATENÇÃO! Considere como servidor de aplicação o servidor que irá hospedar o chat. Como servidor de controle, será o servidor usado para executar o Ansible!__
 
 ## Mudanças para implementação do projeto
@@ -72,4 +71,5 @@ script:
 > Instalando e testando o __servidor de controle com Ansible__ primeiramente em ambiente Ubuntu Linux 18.04. 
 
 A descrição detalhada da configuração e dos passos para deploy automático estão no diretório ```./deploy ``` e em seu [README.md]().
+
 
