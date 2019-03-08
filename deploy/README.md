@@ -59,10 +59,89 @@ $ sudo ssh ubuntu@192.168.0.10
 
 
 
-
-
 <br>
 
 ## *Playbook*
 
-O playbook é um arquivo baseado na linguagem YAML que executará nossas tarefas de deploy, o Ansible se encarregará de executar o script com todos os passos para que o projeto seja clonado do GitHub,  copiado para seu diretório em produção, e que o serviço de web seja reiniciado.
+O playbook é um arquivo baseado na linguagem YAML que executará nossas tarefas de deploy, o Ansible se encarregará de executar o script com todos os passos para que o projeto seja clonado do GitHub,  copiado para seu diretório em produção, e que o serviço de web seja reiniciado. O arquivo é encontrado em ```./deploy/ditoplay-playbook.yml``` e é auto explicativo.
+
+```yaml
+---
+- hosts: localhost
+  vars:
+    release_path: /home/negreiros/ditochat_implements
+
+  tasks:
+
+    - name: Clona o repositório localmente
+      git:
+        repo: ssh://git@github.com/GabrielNegreirosLima/dito-chat.git
+        force: yes
+        accept_hostkey: yes
+        key_file: /home/negreiros/.ssh/id_rsa
+        version: scripts-cd
+        dest: "{{ release_path }}"
+
+
+    - name: Instala as dependencias para criar a build do frontend
+      command: yarn --cwd "{{ release_path }}"/frontend/ install
+
+    - name: Cria a build do frontend
+      command: yarn --cwd "{{ release_path }}"/frontend/ run build
+
+    - name: Instala as dependencias para criar a build do backend
+      command: chdir=/home/negreiros/ditochat_implements/backend go get ./...
+
+    - name: Cria a build do backend
+      command: chdir=/home/negreiros/ditochat_implements/backend go build ./.
+
+
+
+
+# Configurações feitas no ambiente de produção
+- hosts: ditochat
+
+  tasks:
+
+    - name: Copia o diretório de backend para produção
+      copy:
+        src: /home/negreiros/ditochat_implements/backend/
+        dest: /home/negreiros/ditochat_public/backend
+
+
+    - name: Mata os backends anteriores
+      become: yes
+      become_user: root
+      command: killall backend
+      ignore_errors: yes
+
+
+    - name: Configura permissões para execução do backend
+      file: 
+        path:  /home/negreiros/ditochat_public/backend/backend
+        state: file
+        mode: 0755
+
+
+    - name: Executa novo backend
+      command: echo "\n" | /home/negreiros/ditochat_public/backend/backend &
+
+
+    - name: Copia o diretório de build do frontend para produção
+      copy:
+        # O source e no servidor de controle e o dest é o servidor de aplicação em produçao
+        src: /home/negreiros/ditochat_implements/frontend/build/
+        dest: /home/negreiros/ditochat_public/frontend
+
+
+    - name: Reinicia o servidor WEB
+      become: yes
+      become_user: root
+      service: name=nginx state=restarted
+```
+
+<br>
+Para a execução correta do playbook, e portanto do processo de deploy, o comando do Ansible deve ser executado da maneira abaixo. É solicitado a senha de root do __servidor de aplicação__ ao executá-lo:
+```bash
+$ ansible-playbook deploy/ditochat-playbook.yml --ask-become-pass
+```

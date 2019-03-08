@@ -25,7 +25,7 @@ PORT=80
 
 > Instalando e testando a aplicação primeiramente em ambiente Ubuntu Linux 18.04. Os scripts em Shell estão dentro do diretório ./basics.
 
-A descrição detalhada da instalação das depêndencias e configuração do __ambiente de produção__ pode ser encontrada no diretório ```./basics``` e seu README.md.
+A descrição detalhada da instalação das depêndencias e configuração do __ambiente de produção__ pode ser encontrada no diretório ```./basics``` e seu [README.md]().
 
 <br>
 
@@ -71,5 +71,5 @@ script:
 
 > Instalando e testando o __servidor de controle com Ansible__ primeiramente em ambiente Ubuntu Linux 18.04. 
 
-A descrição detalhada da configuração e dos passos para deploy automático estão no diretório ```./deploy ``` e em seu README.md.
+A descrição detalhada da configuração e dos passos para deploy automático estão no diretório ```./deploy ``` e em seu [README.md]().
 
