@@ -60,6 +60,11 @@ $ sudo make install
 $ make test
 ```
 
+7. Agora, basta executar o comando abaixo e pressionar ENTER para que o servidor do redis comece a executar:
+```bash
+$ redis-server &
+```
+
 
 <br>
 
