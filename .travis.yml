@@ -1,0 +1,23 @@
+# Linguagem a ser executada
+language: node_js
+
+# Versao do Node
+# A atual versao estavel (marco de 2019) do Node apresenta um bug no Jest com o Travis CI
+node_js:
+  - 11.10.1
+
+# Pasta a ser cacheada
+cache:
+ directories:
+   - node_modules
+
+
+# Comando a ser executado antes dos scripts de teste
+before_script:
+  - cd frontend/
+  - rm -Rf node_modules/
+
+# Instalacao das dependencias e execucao da suite de testes
+script:
+  - npm install
+  - npm test
