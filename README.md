@@ -70,6 +70,6 @@ script:
 
 > Instalando e testando o __servidor de controle com Ansible__ primeiramente em ambiente Ubuntu Linux 18.04. 
 
-A descrição detalhada da configuração e dos passos para deploy automático estão no diretório ```./deploy ``` e em seu [README.md]().
+A descrição detalhada da configuração e dos passos para deploy automático estão no diretório ```./deploy ``` e em seu [README.md](https://github.com/GabrielNegreirosLima/dito-chat/tree/master/deploy#deploy-cont%C3%ADnuo-com-ansible).
 
 
