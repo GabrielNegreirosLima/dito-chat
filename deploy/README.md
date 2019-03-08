@@ -141,7 +141,7 @@ O playbook é um arquivo baseado na linguagem YAML que executará nossas tarefas
 ```
 
 <br>
-Para a execução correta do playbook, e portanto do processo de deploy, o comando do Ansible deve ser executado da maneira abaixo. É solicitado a senha de root do __servidor de aplicação__ ao executá-lo:
+Para a execução correta do playbook, e portanto do processo de deploy, o comando do Ansible deve ser executado da maneira abaixo. É solicitado a senha de root do **servidor de aplicação** ao executá-lo:
 
 ```bash
 $ ansible-playbook deploy/ditochat-playbook.yml --ask-become-pass
